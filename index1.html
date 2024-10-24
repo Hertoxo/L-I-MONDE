@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr-Fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titew -->
+
+        <title>𝓛' 𝓘-𝓜𝓞𝓝𝓓𝓔</title>
+
+    <!-- Css / Scss -->
+
+        <link rel="stylesheet" href="assets/css/style1.css">
+        <link rel="stylesheet" href="assets/scss/main.scss">
+        <link rel="stylesheet" href="assets/css/animation.css">
+
+    <!-- Icons -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Logo -->
+        <link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon">
+    
+</head>
+<body>
+
+    <header>
+
+      <div class="dropdown">
+        <button id="selectedCountry" class="dropbtn">FRANCE &#9662;</button>
+        <div class="dropdown-content">
+            <a href="#" class="country-option">ESPAGNE</a>
+            <a href="#" class="country-option">ÉTATS-UNIS</a>
+            <a href="#" class="country-option">ITALIE</a>
+            <a href="#" class="country-option">ROYAUME-UNI</a>
+        </div>
+      </div>
+      <script>
+        const button = document.getElementById('selectedCountry');
+        const options = document.querySelectorAll('.country-option');
+
+        options.forEach(option => {
+            option.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                let currentCountry = button.innerText.split(' ')[0]; 
+                let selectedCountry = this.innerText;
+                
+                button.innerText = selectedCountry + " \u25BC";  
+
+                this.innerText = currentCountry;
+            });
+        });
+      </script>
+      
+        <h2 class="title-page">
+            <a href="index1.html"> 
+              
+              <img src="assets/img/title-removebg-preview.png"> 
+              <span>Le seul monde internet dont vous avez besoin.</span>
+            
+            </a>
+        </h2>
+
+        <img src="assets/img/connect-removebg-preview.png" class="connect">
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-links-item"><a href="#"><strong><i class="fa-solid fa-house"></i></strong></li></a>
+                <li class="nav-links-item"><a href="#">Actualités<i class="fa-solid fa-chevron-down"></i></li></a>
+                <li class="nav-links-item"><a href="#">Économie<i class="fa-solid fa-chevron-down"></i></li></a>
+                <li class="nav-links-item"><a href="#">Internationale<i class="fa-solid fa-chevron-down"></i></li></a>  
+                <li class="nav-links-item"><a href="#">Culture<i class="fa-solid fa-chevron-down"></i></li></a>
+                <li class="nav-links-item"><a href="#">Nos interviews<i class="fa-solid fa-chevron-down"></i></li></a>
+            </ul>
+        </nav>  
+    </header>
+
+
+
+    <section class="fakenews">
+
+        <p class="s-text">Actualités</p>
+
+        <h1>
+            HIER, EMMANUEL MACRON, <br> 
+            A ÉTÉ VU  EN COMPAGNIE  <br>
+            DU PRESDIENT ISRAELIEN À DUBAI.
+
+        </h1>
+
+        <hr style="width: 25%; height: 1px; border: none; background-color: black;" class="trait">
+
+        <p class="desc">Un homme anonyme a déclaré avoir vu le président français Emmanuel Macron <br> en discussion avec le président israélien, lors d'un événement privé à Paris. <br> Selon ses dires, les deux dirigeants semblaient engagés dans un échange animé, entourés de plusieurs conseillers. <br>
+
+            <a href="#start-article"> 
+                <button id="look-more" class="btn" >
+                    <i class="fa-solid fa-circle-info"></i> 
+                    En savoir plus
+                </button>
+            </a>    
+
+        <div class="image-container">
+          <img src="assets/img/pub 6.png" class="pub6" id="myImage">
+          <i class="fa-solid fa-hand-pointer"></i>
+        </div>
+        <div id="myTooltip" class="tooltip">Les publicités sur les sites de fake news sont essentielles à leur modèle économique, leur permettant de générer des revenus à partir de trafic élevé, souvent obtenu grâce à des contenus sensationnels ou trompeurs. Cela soulève des questions éthiques sur la responsabilité des plateformes publicitaires et des annonceurs, car elles contribuent à la propagation de la désinformation.</div>
+        <script>
+          const image = document.getElementById('myImage');
+          const tooltip = document.getElementById('myTooltip'); 
+          
+          image.addEventListener('click', function() {
+              tooltip.classList.toggle('visible'); 
+          });
+      
+          image.addEventListener('mouseout', function() {
+              tooltip.classList.remove('visible'); 
+          });
+        </script>
+        <img src="assets/img/pub 7.png" class="pub7">
+        <img src="assets/img/pub8.png" class="pub8">
+
+        </section>
+    
+    <section id="start-article">    
+        
+        <div class="discussion">
+            <img src="assets/img/discute-fr.jpg" width="600px" height="auto">
+            <h2>Un témoin anonyme affirme avoir aperçu Emmanuel Macron en conversation avec le président israélien</h2>
+            <p>En effet, un homme a <strong>déclaré avoir vu</strong> le président français <strong> Emmanuel Macron</strong> en <strong> discussion</strong> avec <strong>le président israélien</strong>, lors d'un événement privé à Paris. Selon ses dires, les deux dirigeants semblaient engagés dans un échange animé, entourés de plusieurs conseillers.
+              L'incident a suscité l'intérêt des médias, notamment en raison de l'importance des relations franco-israéliennes dans le contexte actuel. Les témoins affirment que la conversation portait sur des sujets liés à la sécurité régionale et à la coopération économique, mais aucun détail concret n’a été confirmé.
+              Cette rencontre non officielle a relancé les spéculations sur les efforts diplomatiques en cours entre les deux pays, notamment en ce qui concerne les questions de paix au Moyen-Orient. Les représentants de l'Élysée n'ont pas encore commenté ces affirmations, mais certains analystes politiques soulignent l'importance de tels dialogues en période de tensions internationales.
+              Les réseaux sociaux s'enflamment également, avec des utilisateurs exprimant des opinions variées sur l'impact potentiel de cette rencontre sur la politique française et internationale. Alors que le gouvernement reste discret, cette observation anonyme continue d’alimenter les discussions.</p>
+            <p class="description-image">Emmanuel Macron et le président Israelien ensemble.  
+            <span style="color: grey; letter-spacing: 2px;margin-left: 10px;">Source: tkt frr</span></p>
+        </div>
+
+        <p class="article-content"> 
+        
+        </p>
+
+    </section>
+
+    <section id="Infos">
+        <h2>Emmanuel Macron aperçu à Dubaï : un voyage qui suscite des interrogations..</h2>
+
+        <p>
+              Le président français <strong>Emmanuel Macron a été aperçu récemment à Dubaï</strong>, où il aurait participé à plusieurs réunions avec des chefs d'entreprise et des investisseurs. <br>Cette visite surprise a rapidement attiré l'attention des médias et des analystes politiques, qui s'interrogent sur les objectifs de ce déplacement. <br><br>	      
+            
+              Nulla ante purus, gravida et faucibus vitae, aliquet sed nibh. Fusce at purus vulputate, scelerisque eros viverra, condimentum sem. Vivamus quis dui ut eros molestie suscipit. Quisque vel maximus nulla. Donec sodales feugiat enim. In aliquam augue quis nisi placerat, ut cursus nisi suscipit. Aliquam commodo urna maximus turpis fringilla bibendum. Duis risus erat, interdum sed maximus at, rutrum in magna.<br><br> Maecenas aliquam sapien ac aliquet luctus. Phasellus vitae finibus magna. Morbi eu enim hendrerit justo laoreet faucibus.
+
+              Aenean id semper urna. Integer commodo commodo urna nec ultricies. Proin neque massa, sodales vel eleifend in, scelerisque ut tortor. Mauris vel turpis quis velit eleifend imperdiet. Nunc ac lacinia velit. Integer ultrices porttitor lorem, sed convallis nisl. Praesent orci sem, vulputate id dapibus in, sodales ac lectus. Suspendisse quam lectus, vulputate id turpis a, sagittis auctor lacus. <br>Integer eget mauris cursus eros consequat luctus vitae eget felis. In sed molestie lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla elit orci, gravida in neque ut, sodales volutpat ligula. Sed dignissim leo vitae orci lacinia luctus. Ut tristique, lorem sed semper finibus, odio nibh feugiat neque, vel molestie sem neque in augue.
+
+              Praesent ac nibh sapien. Aenean eget eleifend orci. Sed augue libero, iaculis et ipsum ut, rutrum blandit justo. Phasellus scelerisque nisl non sollicitudin elementum. Sed et rhoncus augue. Nam sit amet tortor nec tellus tincidunt dignissim. Praesent suscipit porttitor nisi, vel pretium lorem mattis et. Sed tempor consectetur ornare. Integer vel neque eu dui scelerisque volutpat eu quis ipsum.<br><br> Duis finibus interdum orci. Morbi felis orci, blandit non leo at, ultrices bibendum felis. Fusce imperdiet sem ac efficitur tincidunt. Cras congue congue hendrerit. Ut fermentum molestie dolor sed finibus. Mauris in blandit velit.
+
+              Morbi lacinia laoreet tincidunt. Vestibulum condimentum justo ligula, a ultrices.
+        </p> 
+        <img src="assets/img/manu.png" class="manu">
+
+    </section>
+
+    <hr style="width: 85%; height: 2px; border: none; background-color: black;margin-top: 20px;" class="séparation">
+
+    <section class="related-articles">
+      <h2>VOUS AIMEREZ PEUT ÊTRE..</h2>
+      <div class="articles-container">
+
+          <article class="article" style="cursor: pointer;">
+              <img src="assets/img/phone.webp">
+              <div class="category"> Technologie & Innovation</div>
+              <h3>Une startup française dévoile un smartphone qui se recharge en 10 secondes</h3>
+              <p> La startup parisienne ElectroVolt vient de révolutionner l'industrie des smartphones en annonçant un appareil capable de se recharger entièrement en seulement 10 secondes. Grâce à une batterie à base de graphène, ce nouveau téléphone pourrait changer la donne dans le secteur.</p>
+              <span class="author">Par Sophie Lambert</span>
+          </article>
+  
+          <article class="article" style="cursor: pointer;">
+              <img src="assets/img/df0f3a56-70d5-43ef-8edb-2790205589d5 (1).webp" >
+              <div class="category">SPORT</div>
+              <h3>Des supporters arabes accusés d'avoir arracher le drapeau israelien d'un supporter.</h3>
+              <p>Lors d'un match de football très attendu, un groupe de supporters a provoqué une vive réaction en arrachant un drapeau d'Israël, suscitant des tensions dans le stade. L'incident s'est produit après qu'une équipe a marqué un but, déclenchant une vague d'émotions parmi les fans.  </p>
+              <span class="author">Par John Doe</span>
+          </article>
+  
+          <article class="article" style="cursor: pointer;">
+              <img src="assets/img/DALL·E 2024-10-24 18.03.27 - A formal meeting scene with Chinese and American diplomats sitting across a large table, discussing climate change. Both sides look serious and engage.webp" >
+              <div class="category">INTERNATIONAL</div>
+              <h3>La Chine et les États-Unis relancent des discussions sur le climat</h3>
+              <p>Les deux plus grandes économies du monde ont récemment repris des négociations pour établir un plan commun afin de réduire leurs émissions de gaz à effet de serre d’ici 2030. Un accord historique pourrait être signé lors du prochain sommet international.</p>
+              <span class="author">Par Ismael CHARI</span>
+          </article>
+  
+          <article class="article" style="cursor: pointer;">
+              <img src="assets/img/medecine.webp" >
+              <div class="category">TECHNOLOGIE</div>
+              <h3>L'intelligence artificielle réinvente la médecine prédictive</h3>
+              <p>Des chercheurs ont développé une IA capable de prédire certaines maladies génétiques à partir de simples analyses de données. Cette avancée pourrait révolutionner le diagnostic médical et permettre des traitements plus rapides.</p>
+              <span class="author">Par Julien Martin</span>
+          </article>
+      </div>
+  </section>
+    
+  </div>
+
+    <footer class="footer">
+        <div class="footer__addr">
+          <h1 class="footer__logo">L' I-MONDE</h1>
+              
+          <h2>Contact</h2>
+          
+          <address>
+            324 Quelque Part Dans Le Monde 22193-10212<br>
+                
+            <a class="footer__btn" href="mailto:contact@imonde.fr" style="margin-left: 40px;">Nous contacter | contact@imonde.fr</a>
+          </address>
+        </div>
+        
+        <ul class="footer__nav">
+          <li class="nav__item">
+            <h2 class="nav__title">Plan du site</h2>
+      
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Actualités</a>
+              </li>
+      
+              <li>
+                <a href="#">Économie</a>
+              </li>
+                  
+              <li>
+                <a href="#">Internationale</a>
+              </li>
+
+              <li>
+                <a href="#">Culture</a>
+              </li>
+
+              <li>
+                <a href="#">Nos interviews</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav__item nav__item--extra">
+            <h2 class="nav__title">Nos résaux</h2>
+            
+            <ul class="nav__ul nav__ul--extra">
+              <li>
+                <a href="#">Youtube</a>
+              </li>
+              
+              <li>
+                <a href="#">X</a>
+              </li>
+              
+              <li>
+                <a href="#">Facebook</a>
+              </li>
+              
+              <li>
+                <a href="#">Instagram</a>
+              </li>
+              
+              <li>
+                <a href="#">Autres...</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav__item">
+            <h2 class="nav__title">Legal</h2>
+            
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Politique de confidentialité.</a>
+              </li>
+              
+              <li>
+                <a href="#">Conditions d'utilisation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        
+        <div class="legal">
+          <p>&copy; 2024 L' I-MONDE Tous droits réservés</p>
+          
+          <div class="legal__links">
+            <span>Fait avec <span class="heart">♥</span> par Ismael CHARI (Frère de Yasmina)</span>
+          </div>
+        </div>
+      </footer>
+
+      <div id="disclaimer">
+        <div id="disclaimer-content">
+            <h1><i class="fa-solid fa-triangle-exclamation"></i> Avertissement <i class="fa-solid fa-triangle-exclamation"></i></h1>
+            <p>
+              Vous voici ici dans un exemple de site de fake news, <br>
+              Si vous n'avez pas encore regardé le premier lien d'explication du thême. <br>
+              Veuillez le visitez d'abord afin de mieux comprendre l'utlilite de ce site.
+              Ce site a été créer et imaginer de toute piece par ma personne. <br>
+              Il illustre parfaitement (selon moi) ce à quoi ressemblerai un site rempli de fake news ...
+            </p>
+            <button id="disclaimer-btn">OK</button>
+        </div>
+      </div>
+      <div id="second-message" style="display: none;">
+        <div id="second-message-content">
+            <h1><i class="fa-solid fa-circle-info"></i> Quelques infos <i class="fa-solid fa-circle-info"></i></h1>
+            <p>
+              - Veuillez cliquer sur la pub de droite pour plus d'infos sur les pubs. <br><br>
+              - Veuillez cliquer sur le bouton "en savoir plus" des cookies pour plus d'infos sur les cookies.
+            </p>
+            <button id="second-message-btn">Fermer</button>
+        </div>
+      </div>
+      <script>
+          document.getElementById('disclaimer-btn').addEventListener('click', function() {
+              document.getElementById('disclaimer').style.display = 'none'; 
+              document.getElementById('second-message').style.display = 'block'; 
+          });
+
+          document.getElementById('second-message-btn').addEventListener('click', function() {
+              document.getElementById('second-message').style.display = 'none'; 
+          });
+      </script>
+      </script>
+
+    <script>
+        document.querySelector('.dropbtn').addEventListener('click', function() {
+            var dropdown = document.querySelector('.dropdown-content');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+            });
+
+            window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.querySelectorAll('.dropdown-content');
+                dropdowns.forEach(function(dropdown) {
+                dropdown.style.display = 'none';
+                });
+                }
+            }
+
+    </script>
+
+    <div id="cookiePopup">
+      <img src="assets/img/cookies.png" alt="Cookies" id="cookieImage">
+      <h2>Cookies!</h2>
+      <p>Nous utilisons des cookies pour rendre votre expérience meilleure.</p>
+      <div class="button-container">
+          <button id="privacyPolicy">En savoir plus</button>
+          <button id="acceptCookie">OK</button>
+      </div>
+    </div>
+
+    <div id="explanationBubble" style="display: none;">
+      <p>Les cookies sont de petits fichiers stockés sur votre appareil qui nous aident à améliorer votre expérience sur notre site. <br>Mais dans les sites de fakes news, ils servent à récupérer vos données afin de les revendre.</p>
+    </div>
+
+    <script>
+      const privacyPolicyBtn = document.getElementById('privacyPolicy');
+      const acceptCookieBtn = document.getElementById('acceptCookie');
+      const explanationBubble = document.getElementById('explanationBubble');
+
+      privacyPolicyBtn.addEventListener('click', function() {
+          explanationBubble.style.display = explanationBubble.style.display === 'block' ? 'none' : 'block';
+      });
+
+      acceptCookieBtn.addEventListener('click', function() {
+          explanationBubble.style.display = 'none'; 
+          document.getElementById('cookiePopup').style.display = 'none'; 
+      });
+    </script>
+  <script src="assets/js/cookies.js"></script>
+
+  <script>
+
+    window.addEventListener('scroll', function() {
+      var navbar = document.querySelector('header');
+      
+      if (window.scrollY > 50) {  
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+  </script>
+
+  <script>
+
+    let lastScrollTop = 0; 
+    const navbar = document.querySelector('header'); 
+    const navbarHeight = navbar.offsetHeight; 
+
+    window.addEventListener('scroll', function() {
+      let scrollTop = window.scrollY; 
+      
+      if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
+        navbar.style.top = `-${navbarHeight}px`;
+      } else {
+       
+        navbar.style.top = '0';
+      }
+      
+      lastScrollTop = scrollTop; 
+    });
+
+  </script>
+</body>
+</html>
